@@ -55,6 +55,7 @@ Count The Total List Of Found Products
     END
     [Return]    @{list_of_products}
 
+
 Count products for each group, start with and doesn't start with "${product_name}”
     [Documentation]     using keyword "Count The Total List Of Found Products"to get all products list and split to two lists, starting with product name and not starting with the product name
 
@@ -75,7 +76,6 @@ Count products for each group, start with and doesn't start with "${product_name
     END
 
     [Return]    ${start_with_list}      ${not_start_with_list}
-
 
 
 Find The More Expensive Item which its name "${condition}" with "${product_name}”

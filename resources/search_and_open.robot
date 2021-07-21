@@ -8,7 +8,7 @@ ${browser}          Chrome
 
 *** Keywords ***
 Open Browser on "www.google.com"
-    Open Browser    https://www.google.com      ${browser}
+    Open Browser    https://www.google.com/en      ${browser}
 
 
 Search for "${value}" and Search
