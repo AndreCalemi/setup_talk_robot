@@ -1,13 +1,25 @@
 *** Settings ***
 Library           RequestsLibrary
+Library    SeleniumLibrary
 
 
 *** Variables ***
-${api_key}      5F7H9VGYXQJHASFS
-${base_url}     https://www.alphavantage.co/query?
 
 
 *** Keywords ***
+
+Get name and last name from reqres API for id "${id_num}"
+
+    ${URL}          Set Variable    https://reqres.in/api/users?page=1
+    ${response}     GET             ${URL}
+    
+    ${id_num}       Evaluate    ${id_num} - 1
+    
+    ${name}         Set Variable    ${response.json()["data"][${id_num}]["first_name"]}
+    ${last_name}    Set Variable    ${response.json()["data"][${id_num}]["last_name"]}
+
+    [Return]    ${name}     ${last_name}
+
 Get rate
     [Documentation]  Returns the rate between from_currency and to_currency
     [Arguments]     ${from_currency}   ${to_currency}

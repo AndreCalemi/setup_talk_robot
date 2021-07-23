@@ -9,7 +9,6 @@ Library    String
 
 *** Keywords ***
 
-
 Search For "${product}" Using The Search Bar
     Input Text    xpath://*[@name="field-keywords"]    ${product}
     Press Keys     None      ENTER
@@ -57,7 +56,7 @@ Count The Total List Of Found Products
 
 
 Count products for each group, start with and doesn't start with "${product_name}”
-    [Documentation]     using keyword "Count The Total List Of Found Products"to get all products list and split to two lists, starting with product name and not starting with the product name
+    [Documentation]     using keyword "Count The Total List Of Found Products" to get all products list and split to two lists, starting with product name and not starting with the product name
 
     # get list with all products containing description and price for each element
     @{list_of_products}       Count The Total List Of Found Products
