@@ -11,7 +11,7 @@ Open Browser on "www.google.com"
     Open Browser    https://www.google.com/en      ${browser}
 
 
-Search for "${value}" and Search
+Search for "${value}"
     Input Text    xpath://*[@title="Search"]    ${value}
     Press Keys     None      ENTER
 

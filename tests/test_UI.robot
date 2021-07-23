@@ -5,7 +5,7 @@ Resource    ../resources/amazon_brasil_search_page.robot
 
 Suite Setup     Run Keywords    # BACKGROUND
                 ...     Open Browser on "www.google.com"
-                ...     Search for "Amazon Brasil" and Search
+                ...     Search for "Amazon Brasil"
                 ...     Navigate to "www.amazon.com.br" Through The Search Page
                 ...     Search For "${product_name}" Using The Search Bar
 
